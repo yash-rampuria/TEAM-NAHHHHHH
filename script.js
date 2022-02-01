@@ -46,6 +46,7 @@ var bullet_x = -1000;
 var bullet_y = -1000;
 var probx;
 var proby;
+var highscore = 0;
 
 
 document.addEventListener("keydown", keyDownHandler, false);
@@ -203,7 +204,7 @@ function showName() {
   ctx.font = "25px Quicksand";
   ctx.fillText("Number of enemies", canvas.width - 350 + 25, 420);
   ctx.fillText(number_of_enemies, canvas.width - 350 + 25, 460);
-
+  ctx.fillText("Highscore is : "+highscore, canvas.width - 350 + 25, 520);
 
 
 }
@@ -563,6 +564,9 @@ function continuous_running() {
       }
     }
     if (gameOver) {
+      if (highscore < score){
+        highscore=score;
+      }
       praise();
       showScore(gameOver);
       ctx.drawImage(explode_img, jet_x - 50, jet_y - 50, 200, 200);
