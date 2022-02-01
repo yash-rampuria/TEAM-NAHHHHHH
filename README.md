@@ -1,4 +1,5 @@
 # TEAM-NAHHHHHH
+LINK TO DIRECTLY PLAY GAME- https://yash-rampuria.github.io/TEAM-NAHHHHHH/
 This is the game dev hackathon submission for team nahhhhhh by yash rampuria and jason gomez
 
 INSTRUCTIONS---->
