@@ -1,7 +1,10 @@
 # TEAM-NAHHHHHH
+
+**DONT USE W A S D KEYS, USE ARROW KEYS**
+
 LINK TO DIRECTLY PLAY GAME- https://yash-rampuria.github.io/TEAM-NAHHHHHH/
 
-**DONT USE W A S D KEYS, USE ONLY ARROW KEYS**
+**DONT USE W A S D KEYS, USE ARROW KEYS**
 
 This is the game dev hackathon submission for team nahhhhhh by yash rampuria and jason gomez
 
