@@ -123,7 +123,7 @@ function screen1() {
 
   ctx.beginPath();
   ctx.rect(canvas.width / 2 - 100, 625 - 50 - 50, 200, 50);  //old = 625 , 50 (y direction)
-  ctx.fillStyle = "A000A0";
+  ctx.fillStyle = "#A000A0";
   ctx.fill();
   ctx.closePath();
 
@@ -525,39 +525,20 @@ function continuous_running() {
       if (number_of_enemies <= 1) {
 
         if (score % 600 == 0 && score > 0) {
-          number_of_enemies++;
-          enemy_speedx.push(2 * Math.floor(2 * Math.random()) - 1);
-          enemy_speedy.push(2 * Math.floor(2 * Math.random()) - 1);
-          probx = 6 + Math.floor(Math.random() * 936);
-          proby = 200 + Math.floor(Math.random() * 435);
-          while (distance(probx, proby, jet_x, jet_y) < 350) {
+          for (let k=1; k<6;k++){
+            number_of_enemies++;
+            enemy_speedx.push(2 * Math.floor(2 * Math.random()) - 1);
+            enemy_speedy.push(2 * Math.floor(2 * Math.random()) - 1);
             probx = 6 + Math.floor(Math.random() * 936);
             proby = 200 + Math.floor(Math.random() * 435);
+            while (distance(probx, proby, jet_x, jet_y) < 350) {
+              probx = 6 + Math.floor(Math.random() * 936);
+              proby = 200 + Math.floor(Math.random() * 435);
+            }
+            enemy_x.push(probx);
+            enemy_y.push(proby);
           }
-          enemy_x.push(probx);
-          enemy_y.push(proby);
-          number_of_enemies++;
-          enemy_speedx.push(2 * Math.floor(2 * Math.random()) - 1);
-          enemy_speedy.push(2 * Math.floor(2 * Math.random()) - 1);
-          probx = 6 + Math.floor(Math.random() * 936);
-          proby = 200 + Math.floor(Math.random() * 435);
-          while (distance(probx, proby, jet_x, jet_y) < 350) {
-            probx = 6 + Math.floor(Math.random() * 936);
-            proby = 200 + Math.floor(Math.random() * 435);
-          }
-          enemy_x.push(probx);
-          enemy_y.push(proby);
-          number_of_enemies++;
-          enemy_speedx.push(2 * Math.floor(2 * Math.random()) - 1);
-          enemy_speedy.push(2 * Math.floor(2 * Math.random()) - 1);
-          probx = 6 + Math.floor(Math.random() * 936);
-          proby = 200 + Math.floor(Math.random() * 435);
-          while (distance(probx, proby, jet_x, jet_y) < 350) {
-            probx = 6 + Math.floor(Math.random() * 936);
-            proby = 200 + Math.floor(Math.random() * 435);
-          }
-          enemy_x.push(probx);
-          enemy_y.push(proby);
+          
         }
         
 
@@ -593,7 +574,7 @@ function continuous_running() {
       }
       ctx.beginPath();
       ctx.rect(canvas.width - 350 + 23, canvas.height - 100, 200, 50);
-      ctx.fillStyle = "FFFFFF";
+      ctx.fillStyle = "#FFFFFF";
       ctx.fill();
       ctx.closePath();
 
@@ -602,21 +583,24 @@ function continuous_running() {
       ctx.fillText("RETRY", canvas.width - 350 + 75, canvas.height - 65);
 
       ctx.beginPath();
-      ctx.rect(canvas.width/2 - 350 + 23, canvas.height - 100, 200, 50);
-      ctx.fillStyle = "FFFFFF";
+      ctx.rect(canvas.width/2 - 500 + 23, 50, 620, 50);
+      ctx.fillStyle = "#FF66FF";
       ctx.fill();
       ctx.closePath();
 
       ctx.font = "30px Quicksand";
       ctx.fillStyle = "#000000";
-      ctx.fillText("RETRY", canvas.width - 350 + 75, canvas.height - 65);
+      ctx.fillText("GREAT SCORE!!! Click here to claim reward", canvas.width/2 - 480 + 30, 83);
 
 
       if (mouse_x > canvas.width - 350 + 23 && mouse_x < canvas.width - 350 + 23 + 200 && mouse_y < canvas.height - 50 && mouse_y > canvas.height - 100) {
         retry();
-        // location.assign('https://www.youtube.com/watch?v=dQw4w9WgXcQ&t=1s');
-        // clearInterval(interval);
 
+      }
+
+      if (mouse_x > canvas.width/2 - 500 + 23 && mouse_x < canvas.width + 120 + 23 && mouse_y < 100 && mouse_y > 50){
+        location.assign('https://www.youtube.com/watch?v=dQw4w9WgXcQ&t=1s');
+        clearInterval(interval);
       }
 
     }
