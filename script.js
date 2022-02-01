@@ -115,7 +115,7 @@ function screen1() {
   ctx.fillText("YOU ARE THE PILOT OF A SMALL FIGHTER AIRCRAFT", canvas.width / 2, 150 - 50);
   ctx.fillText("YOU NEED TO DODGE THE OTHER BIG BLACK FIGHTERS AND NOT CRASH INTO THEM", canvas.width / 2, 200 - 50);
   ctx.fillText("SCORE KEEPS INCREASING AS YOU KEEP SURVIVING", canvas.width / 2, 250 - 50);
-  ctx.fillText("USE ARROW KEYS or WASD TO MOVE UP DOWN RIGHT LEFT", canvas.width / 2, 300 - 50);
+  ctx.fillText("USE ARROW KEYS TO MOVE UP DOWN RIGHT LEFT", canvas.width / 2, 300 - 50);
   ctx.fillText("SHOOT THE ENEMIES WITH BULLETS USING SPACEBAR", canvas.width / 2, 350 - 50);
   // ctx.fillText("STAY ABOVE THE WARNING LINE UNTIL ENEMIES COME TO STAY SAFE", canvas.width/2, 400-50);
   ctx.fillText("BEWARE-ENEMIES CAN CAMOUFLAGE AND NEW ENEMIES SPAWN EVERY FEW SECONDS :)", canvas.width / 2, 400 - 50);
